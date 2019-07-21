@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<script src='./modal.js'></script>
+</head>
+<body>
+	<button id="button-alert">buttonAlert</button>
+	<button id="button-confirm">buttonConfirm</button>
+	<script>
+		const buttonAlert = document.querySelector('#button-alert')
+		const buttonConfirm = document.querySelector('#button-confirm')
+
+		const showAlertModal = () => new Modal({
+				type: 'alert',
+				containerStyle: 'alert-style',
+				content: 'This is an alert modal',
+				confirm: {
+					text: 'confirm',
+					action: () => { console.log('confirm') },
+				},
+				close: {
+					action: () => { console.log('close') },
+				}
+			})
+		const showConfirmModal = () => new Modal({
+				type: 'confirm',
+				containerStyle: 'confirm-style',
+				content: 'This is an confirm modal',
+				confirm: {
+					text: 'confirm',
+					action: () => { console.log('confirm') },
+				},
+				cancel: {
+					text: 'cancel',
+					action: () => { console.log('cancel') },
+				},
+				close: {
+					action: () => { console.log('close') },
+				}
+			})
+
+		buttonAlert.addEventListener('click', showAlertModal)
+		buttonConfirm.addEventListener('click', showConfirmModal)
+	</script>
+</body>
+</html>
