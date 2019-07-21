@@ -10,3 +10,6 @@ https://github.com/feHank/interview/blob/master/performance.md
 # 框架篇
 https://github.com/loveinbox/interview/blob/master/framework.md
 
+# 杂项
+https://github.com/loveinbox/interview/blob/master/misc.md
+
